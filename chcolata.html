@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #4caf50;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        form label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+            font-weight: bold;
+        }
+
+        form input, form select, form textarea, form button {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        ul#review-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul#review-list li {
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #4caf50;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chocolate Reviews</h1>
+        <p>Leave your feedback and explore others' experiences with our chocolate!</p>
+    </header>
+
+    <main>
+        <section id="review-form">
+            <h2>Leave a Review</h2>
+            <form id="submit-review">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="5">5 - Excellent</option>
+                    <option value="4">4 - Good</option>
+                    <option value="3">3 - Average</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="1">1 - Terrible</option>
+                </select>
+
+                <label for="review">Review:</label>
+                <textarea id="review" name="review" rows="4" required></textarea>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <ul id="review-list">
+                <!-- Reviews will be dynamically added here -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Chocolate Reviews. All rights reserved.</p>
+    </footer>
+</body>
+</html>
